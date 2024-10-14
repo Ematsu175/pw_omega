@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.img-principal{
+    background-color: rgb(240, 240, 240); /* Cambia esto al color que desees */
+    padding: 20px; /* Espaciado interno opcional */
+    display: inline-block; /* Asegura que el contenedor se ajuste al tamaño de la imagen */
+}
