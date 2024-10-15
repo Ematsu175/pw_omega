@@ -12,8 +12,56 @@ main {
     flex-grow: 1;
 }
 
-.img-principal{
-    background-color: rgb(240, 240, 240); /* Cambia esto al color que desees */
-    padding: 20px; /* Espaciado interno opcional */
-    display: inline-block; /* Asegura que el contenedor se ajuste al tamaño de la imagen */
+.navbar {
+    padding: 10px 20px;
 }
+  
+.navbar-nav .nav-link {
+    font-weight: bold;
+    margin-right: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s; 
+}
+  
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 0, 0) !important;
+}
+  
+.navbar-nav .btn-outline-light {
+    border: 2px solid #fff;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+.carousel-control-prev, 
+.carousel-control-next {
+  border: none;
+  background: none;
+}
+
+/* Asegurarse de que los íconos de los botones sean transparentes */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); 
+  background-size: 100%, 100%;
+  border-radius: 50%; 
+}
+
+/* Eliminar cualquier estilo de borde no deseado en los íconos */
+.carousel-control-prev-icon:focus, 
+.carousel-control-next-icon:focus, 
+.carousel-control-prev-icon:active, 
+.carousel-control-next-icon:active {
+  outline: none; 
+}
+
+.carousel-item {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .carousel-item.active {
+    opacity: 1;
+}
+  
