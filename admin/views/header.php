@@ -26,13 +26,16 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white" href="figura_fiscal.php?accion=default">FIGURAS FISCALES</a>
+          <a class="nav-link text-white" href="figura_fiscal.php">FIGURAS FISCALES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="empresa.php?accion=default">EMPRESAS</a>
+          <a class="nav-link text-white" href="empresa.php">EMPRESAS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="cita.php?accion=default">CITA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="usuario.php?accion=default">USUARIOS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-outline-light text-white" href="/login/index.php">LOGIN</a>

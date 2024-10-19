@@ -65,7 +65,7 @@
             include('views/empresa/index.php');
             
             break;
-        case 'default':
+        default:
             $empresas=$app->readAll();
             include('views/empresa/index.php');
     }

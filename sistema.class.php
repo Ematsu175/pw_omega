@@ -42,5 +42,64 @@
             }
             return $data;
         }
+        function login($correo, $contrasena){
+            $contrasena = md5($contrasena);
+            $acceso = false;
+            if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+                $this->conexion();
+                $sql = 'select * from usuario 
+                        where correo=:correo and contrasena=:contrasena;';
+                $login = $this->con->prepare($sql);
+                $login->bindParam('correo', $correo, PDO::PARAM_STR);
+                $login->bindParam('contrasena', $contrasena, PDO::PARAM_STR);
+                $login->execute();
+                $resultado = $login->fetchAll(PDO::FETCH_ASSOC);
+                if(isset($resultado[0])){
+                    $acceso = true;
+                    $_SESSION['correo'] = $correo;
+                    $_SESSION['validado'] = $acceso;
+                    $roles = $this->getRol($correo);
+                    $privilegios = $this->getPrivilegios($correo);
+                    $_SESSION['roles']=$roles;
+                    $_SESSION['privilegios']= $privilegios;
+                    return $acceso;
+                } 
+                
+            }
+            $_SESSION['validado'] = false;
+            return $acceso;
+        }
+        function logout(){
+            unset($_SESSION);
+            session_destroy();
+            $mensaje = "Gracias por utilizar el sistema, se ha cerrado la sesión. <a href='login.php'>[Presione aqí para volver a entrar]</a>";
+            $tipo = "success";
+            require_once('views/header.php');
+            $this->alerta($tipo, $mensaje);
+            require_once('views/footer.php');
+        }
+
+        function checkRol($rol){
+            if(isset($_SESSION['roles'])){
+                $roles = $_SESSION['roles'];
+                if(!in_array($rol, $roles)){
+                    $mensaje = "Error usted no tiene el rol adecuado";
+                    $tipo = "danger";
+                    require_once('views/header/alert.php');
+                    $this->alerta($tipo, $mensaje);
+                    die();
+                }
+                
+            } else {
+                $mensaje = "Requiere iniciar sesión. <a href='login.php'>[Presione aqí para volver a entrar]</a>";
+                $tipo = "danger";
+                require_once('views/header.php');
+                $this->alerta($tipo, $mensaje);
+                require_once('views/footer.php');
+                die();
+            }
+            
+        }
+        
     }
 ?>

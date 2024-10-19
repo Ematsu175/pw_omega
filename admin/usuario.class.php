@@ -1,15 +1,16 @@
 <?php
     require_once('../sistema.class.php');
 
-    class Figura_fiscal extends Sistema{
+    class Usuario extends Sistema{
 
         function create($data){
             $this->conexion();
             $result=[];
-            $sql="insert into figura_fiscal(figura_fiscal) 
-                        values (:figura_fiscal);";
+            $sql="insert into usuario(correo, contrasena) 
+                        values (:correo, md5(:contrasena));";
             $insertar = $this->con->prepare($sql);
-            $insertar->bindParam(':figura_fiscal', $data['figura_fiscal'], PDO::PARAM_STR);
+            $insertar->bindParam(':correo', $data['correo'], PDO::PARAM_STR);
+            $insertar->bindParam(':contrasena', $data['contrasena'], PDO::PARAM_STR);
             $insertar->execute();
             $result = $insertar->rowCount();
 
@@ -19,11 +20,13 @@
         function update($id, $data){
             $this->conexion();
             $result = [];
-            $sql = 'update figura_fiscal set figura_fiscal=:figura_fiscal
-                                       where id_figura_fiscal=:id_figura_fiscal;';
+            $sql = 'update usuario set correo=:correo,
+                                       contrasena=MD5(:contrasena)
+                                       where id_usuario=:id_usuario;';
             $modificar = $this->con->prepare($sql);
-            $modificar->bindParam(':figura_fiscal', $data['figura_fiscal'], PDO::PARAM_STR);
-            $modificar->bindParam('id_figura_fiscal', $id, PDO::PARAM_INT);
+            $modificar->bindParam(':correo', $data['correo'], PDO::PARAM_STR);
+            $modificar->bindParam(':contrasena', $data['contrasena'], PDO::PARAM_STR);
+            $modificar->bindParam('id_usuario', $id, PDO::PARAM_INT);
             $modificar->execute();
             $result = $modificar->rowCount();
 
@@ -34,9 +37,9 @@
         function delete($id){
             $this->conexion();
             $result = [];
-            $sql = 'delete from figura_fiscal where id_figura_fiscal=:id_figura_fiscal;';
+            $sql = 'delete from usuario where id_usuario=:id_usuario;';
             $borrar = $this->con->prepare($sql);
-            $borrar->bindParam(':id_figura_fiscal', $id, PDO::PARAM_INT);
+            $borrar->bindParam(':id_usuario', $id, PDO::PARAM_INT);
             $borrar->execute();
             $result = $borrar->rowCount();
 
@@ -46,9 +49,9 @@
         function readOne($id){
             $this->conexion();
             $result = [];
-            $consulta = "select * from empresa where id_empresa=:id_empresa;";
+            $consulta = "select * from usuario where id_usuario=:id_usuario;";
             $sql = $this->con->prepare($consulta);
-            $sql->bindParam("id_empresa", $id, PDO::PARAM_INT);
+            $sql->bindParam("id_usuario", $id, PDO::PARAM_INT);
             $sql->execute();
             $result = $sql->fetch(PDO::FETCH_ASSOC);
             return $result;
@@ -56,7 +59,7 @@
         function readAll(){
             $this->conexion();
             $result=[];
-            $consulta='select * from figura_fiscal;';
+            $consulta='select * from usuario;';
             $sql = $this->con->prepare($consulta);
             $sql->execute();
             $result = $sql->fetchAll(PDO::FETCH_ASSOC);

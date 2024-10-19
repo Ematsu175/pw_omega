@@ -1,35 +1,32 @@
 <?php
-    require_once('cita.class.php');
-    require_once('empresa.class.php');
-    $app = new Cita;
-    $appEmpresa = new Empresa;
+    require_once('usuario.class.php');
+    $app = new Usuario;
     $accion = (isset($_GET['accion']))?$_GET['accion']:null;
     $id = (isset($_GET['id']))?$_GET['id']:null;
 
     switch($accion){
         case 'crear':
-            $empresa = $appEmpresa->readAll();
-            include('views/cita/crear.php');
+            $usuario = $app->readAll();
+            include('views/usuario/crear.php');
             break;
         case 'nuevo':
             $data=$_POST['data'];
             $resultado=$app->create($data);
             if($resultado){
-                $mensaje="Cita dada de alta correctamente";
+                $mensaje="Usuario dado de alta correctamente";
                 $tipo="success";
 
             } else {
-                $mensaje="Hubo un error al momento de agendar la cita";
+                $mensaje="Hubo un error al momento de agregar al usuario";
                 $tipo="danger";
             }
-            $citas=$app->readAll();
-            include('views/cita/index.php');
+            $usuario=$app->readAll();
+            include('views/usuario/index.php');
             break;
 
         case 'actualizar':
-            $citas=$app->readOne($id);
-            $empresa = $appEmpresa->readAll();
-            include('views/cita/crear.php');
+            $usuario=$app->readOne($id);
+            include('views/usuario/crear.php');
             break;
         
         case 'modificar':
@@ -37,15 +34,15 @@
             $result = $app->update($id,$data);
             //print_r($result);
             if($result){
-                $mensaje="Cita actualizada correctamente";
+                $mensaje="Usuario actualizado correctamente";
                 $tipo="success";
 
             } else {
-                $mensaje="Hubo un error no se pudo actualizar la cita";
+                $mensaje="Hubo un error no se pudo actualizar el usuario";
                 $tipo="danger";
             }
-            $citas=$app->readAll();
-            include('views/cita/index.php');
+            $usuario=$app->readAll();
+            include('views/usuario/index.php');
             break;
 
         case 'eliminar':           
@@ -53,20 +50,20 @@
                 if(is_numeric($id)){
                     $resultado = $app->delete($id);
                     if ($resultado) {
-                        $mensaje = "La cita se elimino correctamente";
+                        $mensaje = "El usuario se elimino correctamente";
                         $tipo = "success";
                     } else {
-                        $mensaje = "Error no se elimino la cita";
+                        $mensaje = "Error no se elimino el usuario";
                         $tipo = "danger";
                     }
                 }
             }
-            $citas=$app->readAll();
-            include('views/cita/index.php');
+            $usuario=$app->readAll();
+            include('views/usuario/index.php');
             
             break;
         default:
-            $citas=$app->readAll();
-            include('views/cita/index.php');
+            $usuario=$app->readAll();
+            include('views/usuario/index.php');
     }
 ?>
