@@ -1,5 +1,6 @@
 <?php 
     require_once('../sistema.class.php');
+    //echo "Direccion de una pagina: " . $_SERVER['PHP_SELF'] . "<br>"; 
     
     $accion = (isset($_GET['accion']))?$_GET['accion']:null;
     $id = (isset($_GET['id']))?$_GET['id']:null;

@@ -1,5 +1,5 @@
 <?php require('../header.php'); ?>
-<h1> Crear Usuario </h1>
+<h1> <?php if($accion=="crear"):echo('Nuevo');else: echo('Modificar');endif; ?> Usuario </h1>
 <form method="post" action="usuario.php?accion=<?php if($accion=="crear"):echo('nuevo');else:echo('modificar&id='.$id);endif; ?>">
     <div class="mb-3">
         <label for="empresa" class="form-label">Nombre de la empresa</label>

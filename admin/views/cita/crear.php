@@ -1,5 +1,5 @@
 <?php require('views/header.php'); ?>
-<h1> <?php if($accion=="crear"):echo('Nuevo');else: echo('Modificar');endif; ?> Empresa </h1>
+<h1> <?php if($accion=="crear"):echo('Nueva');else: echo('Modificar');endif; ?> Cita </h1>
 <form method="post" action="cita.php?accion=<?php if($accion=="crear"):echo('nuevo');else:echo('modificar&id='.$id);endif; ?>">
     <div class="mb-3">
         <label for="fecha" class="form-label">Fecha</label>

@@ -23,7 +23,166 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden"></span>
         </button>
+</div>
+<div class="container text-center" style="padding-top: 20px;">
+  <h1>Conócenos</h1>
+</div>
+<div class="container text-center" style="padding-top: 50px;">
+  <div class="row">
+    <div class="col-12 col-md-6 order-1 order-md-1">
+      <img src="../images/img_card1.jpg" alt="..." class="img-fluid">
+    </div>
+    <div class="col-12 col-md-6 order-2 order-md-2">
+      <h2>¿Quiénes somos?</h2>
+      <p style="font-size: 22px; padding-top: 15px; text-align: justify">
+        Omega Software S.A. de C.V. es una empresa enfocada en el desarrollo de software administrativo en el ambito contable. 
+        Vendemos nuestro producto a diferentes empresas a nivel nacional teniendo como prioridad la atención al cliente y la calidad
+        del producto.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container text-center" style="padding-top: 50px;">
+  <div class="row">
+  <div class="col-12 col-md-6 order-2 order-md-1">
+      <h2>Producto</h2>
+      <p style="font-size: 22px; padding-top: 15px; text-align: justify">
+        Nos enfocamos en ofrecer diferentes productos dependiendo del tipo de figura fiscal tenga la empresa
+        que desea adquirir el sistema, esto debido a que cada producto realcionado con la 
+        característica anteriormente mencionada tiene apartados especificos para su correcto uso y 
+        funcionamiento.
+      </p>
+    </div>
+    <div class="col-12 col-md-6 order-1 order-md-2">
+      <img src="../images/img_card1.jpg" alt="..." class="img-fluid">
+    </div>
+  </div>
+</div>
+<div class="container text-center" style="padding-top: 50px;">
+  <div class="row">
+    <div class="col-12 col-md-6 order-1 order-md-1">
+      <img src="../images/img_card1.jpg" alt="..." class="img-fluid">
+    </div>
+    <div class="col-12 col-md-6 order-2 order-md-2">
+      <h2>Nivel nacional</h2>
+      <p style="font-size: 22px; padding-top: 15px; text-align: justify">
+        Somos reconocidos a nivel nacional gracias a recomendaciones de clientes
+        que han quedado satisfechos con los productos brindados.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container text-center" style="padding-top: 20px;">
+  <h1>Beneficios</h1>
+</div>
+<div class="container" style="padding-top: 20px;">
+  <div class="row">
+    <div class="col-12 col-md-3 order-1 order-md-1">
+      <div class="card border-secondary mb-3">
+        <div class="card-header" style="font-weight: bold; font-size: 20px;">
+          Multiplataforma
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p style="font-size: 20px;">
+              Nuestro sistema puede ser instalado en cualquier sistema operativo 
+              y la funcionalidad sigue siendo igual en todos los casos.
+            </p>
+          </blockquote>
+        </div>
       </div>
+    </div>
+    <div class="col-12 col-md-3 order-2 order-md-2">
+      <div class="card border-secondary mb-3">
+        <div class="card-header" style="font-weight: bold; font-size: 20px;">
+          Atención personal
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p style="font-size: 20px;">
+              Si el usuario llegara a tener algún problema con el sistema se puede
+              poner en contacto con los proveedores y estos le darán atencion personal
+              y si tiene alguna duda solo tiene que comunicarse de igual manera con 
+              los proveedores y le darán atención personalizada mediante llamada o videollamada. 
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-3 order-2 order-md-2">
+    <div class="card border-secondary mb-3">
+      <div class="card-header" style="font-weight: bold; font-size: 20px;">
+          Servidor en la nube
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p style="font-size: 20px;">
+              Contamos con servidor en la nube en donde tenemos las bases de datos de 
+              cada una de las empresas que cuentan con nuestro sistema que si la misma
+              emprea desea se puedemos realizar repaldos en la nube de su información.
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-3 order-2 order-md-2">
+    <div class="card border-secondary mb-3">
+      <div class="card-header" style="font-weight: bold; font-size: 20px;">
+          Facturación
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p style="font-size: 20px;">
+              Mediante el sistema podremos realizar varias acciones referentes
+              a la facturación que se necesita como empresa dependiendo de la
+              figura fiscal que estas tengan. 
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+
 <?php require ('views/footer.php') ?>
+
+<!-- 
+
+
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="d-flex gap-2">
+    <div class="card m-1" style="width: 30rem;">
+      <img src="../images/img_card1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="text-center">¿Quiénes somos?</h2>
+        <p style="text-align: justify;">
+          Omega Software S.A. de C.V. es una empresa enfocada en el desarrollo de software administrativo en el ambito contable. 
+          Vendemos nuestro producto a diferentes empresas a nivel nacional teniendo como prioridad la atención al cliente y la calidad
+          del producto. 
+        </p>
+      </div>
+    </div>
+    <div class="card m-1" style="width: 30rem;">
+      <img src="../images/img_card1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="text-center">Producto</h2>
+        <p style="text-align: justify;">
+          Omega Software S.A. de C.V. es una empresa enfocada en el desarrollo de software administrativo en el ambito contable. 
+          Vendemos nuestro producto a diferentes empresas a nivel nacional teniendo como prioridad la atención al cliente y la calidad
+          del producto. 
+        </p>
+      </div>
+    </div>
+    <div class="card m-1" style="width: 30rem;">
+      <img src="../images/img_card1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,4 +1,64 @@
 <?php
+    /*
+    echo "Nombre del archivo: " . $_SERVER['SCRIPT_NAME'] . "<br>";
+    echo "Dirección IP del servidor: " . $_SERVER['SERVER_ADDR'] . "<br>";
+    echo "Puerto del servidor: " . $_SERVER['SERVER_PORT'] . "<br>";
+    echo "Nombre de host: " . $_SERVER['HTTP_HOST'] . "<br>";
+    echo "URI de la solicitud: " . $_SERVER['REQUEST_URI'] . "<br>";
+    echo "Dirección IP del cliente: " . $_SERVER['REMOTE_ADDR'] . "<br>";
+    echo "Agente de usuario: " . $_SERVER['HTTP_USER_AGENT'] . "<br>";
+    echo "Direccion de una pagina: " . $_SERVER['PHP_SELF'] . "<br>";*/
+
+    $resultado = null;
+    if(isset($_POST['formulario'])){
+        $name = $_FILES['imagen']['name'];
+        $tmp_name = $_FILES['imagen']['tmp_name'];
+        $error = $_FILES['imagen']['error'];
+        $size = $_FILES['imagen']['size'];
+        $max_size = 1024*1024*1;
+        $type = $_FILES['imagen']['type'];
+
+        if($error){
+            $resultado = "Ha ocurrido un error";
+        } elseif ($size > $max_size) {
+            $resultado = "El tamaño supera el maximo permitido 1MB";
+        } elseif ($type != 'image/jpg' && $type != 'image/png' && $type != 'image/gif') {
+            $resultado = "Solamente se permiten archivos png, jpg, gif.";
+        } else {
+            $ruta = 'files/'.$name;
+            move_uploaded_file($tmp_name, $ruta);
+            $resultado = "La imagen '$name' ha sido guardada con exito";
+        }
+    }
+
+?>
+<strong><?php echo $resultado ?></strong>
+<form method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    Subir Imagen: <input type="file" name="imagen">
+    <input type="hidden" name="formulario">
+    <input type="submit" value="Subir">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+    session_start();
     require_once('config.class.php');
     class Sistema{
         var $con;
@@ -20,6 +80,11 @@
                 $roles->bindParam('correo', $correo, PDO::PARAM_STR);
                 $roles->execute();
                 $data = $roles->fetchAll(PDO::FETCH_ASSOC);
+                $rolesf = [];
+                foreach($data as $rol){
+                    array_push($rolesf, $rol['rol']);
+                }
+                $data = $rolesf;
 
             }
             return $data;
@@ -39,9 +104,15 @@
                 $privilegios->bindParam('correo', $correo, PDO::PARAM_STR);
                 $privilegios->execute();
                 $data = $privilegios->fetchAll(PDO::FETCH_ASSOC);
+                $permisos = [];
+                foreach($data as $permiso){
+                    array_push($permisos, $permiso['permiso']);
+                }
+                $data = $permisos;
             }
             return $data;
         }
+
         function login($correo, $contrasena){
             $contrasena = md5($contrasena);
             $acceso = false;
@@ -100,6 +171,6 @@
             }
             
         }
-
     }
+
 ?>
