@@ -1,6 +1,7 @@
 
 <!-- Login 8 - Bootstrap Brain Component -->
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/main.css">
 <section class="bg-light p-3 p-md-4 p-xl-5">
   <div class="container">
     <div class="row justify-content-center">
@@ -65,3 +66,4 @@
     </div>
   </div>
 </section>
+<?php require ('views/footer.php') ?>

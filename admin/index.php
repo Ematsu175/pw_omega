@@ -14,6 +14,9 @@
           <div class="carousel-item" data-bs-interval="7000">
             <img src="../images/img_SofomsAgro.png" class="d-block w-100" alt="..." loading="lazy">
           </div>
+          <div class="carousel-item" data-bs-interval="7000">
+            <img src="../images/img_sofipo.png" class="d-block w-100" alt="..." loading="lazy">
+          </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -32,7 +35,7 @@
 <div class="container text-center" style="padding-top: 50px;">
   <div class="row">
     <div class="col-12 col-md-6 order-1 order-md-1">
-      <img src="../images/img_card1.jpg" alt="..." class="img-fluid">
+      <img src="../images/omegaapp_quienessomos.jpeg" alt="..." class="img-fluid">
     </div>
     <div class="col-12 col-md-6 order-2 order-md-2">
       <h2>¿Quiénes somos?</h2>
@@ -63,7 +66,7 @@
 <div class="container text-center" style="padding-top: 50px;">
   <div class="row">
     <div class="col-12 col-md-6 order-1 order-md-1">
-      <img src="../images/img_card1.jpg" alt="..." class="img-fluid">
+      <img src="../images/omegaapp_repmexicana.jpeg" alt="..." class="img-fluid">
     </div>
     <div class="col-12 col-md-6 order-2 order-md-2">
       <h2>Nivel nacional</h2>
@@ -188,12 +191,12 @@
 </div>
 
 <div class="d-flex justify-content-center align-items-center vh-100" style="padding-top: 30px;">
-  <div class="card mb-3" style="max-width: 1024px; height: 500px;">
+  <div class="card mb-3" style="width: 60%; height: 500px;"> <!-- Cambié a width en lugar de max-width -->
     <div class="row g-0 h-100">
-      <div class="col-md-6 h-100">
-        <img src="../images/img_card1.jpg" class="img-fluid rounded-start w-100 h-100" alt="..." style="object-fit: cover;">
+      <div class="col-md-7 h-100"> <!-- Ajusté la columna de la imagen -->
+        <img src="../images/omegaapp_versiones.jpeg" class="img-fluid rounded-start w-100 h-100" alt="..." style="object-fit: cover;">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5"> <!-- Ajusté la columna de contenido -->
         <div class="card-body d-flex justify-content-center align-items-center text-center" style="height: 100%;">
           <ul class="list-unstyled">
             <li class="py-2"><a href="">Cooperativa Autorizada</a></li>
@@ -203,13 +206,14 @@
             <li class="py-2"><a href="">Para Finanzas</a></li>
             <li class="py-2"><a href="">Unión Crédito</a></li>
             <li class="py-2"><a href="">SCAPS</a></li>
-            <li class="py-2"><a href="">Sofipo</a></li>            
+            <li class="py-2"><a href="sofipo.php">Sofipo</a></li>            
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 

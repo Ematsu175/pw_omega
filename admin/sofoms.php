@@ -5,7 +5,7 @@
     </div>
 
     <div class="container text-center" style="padding-top: 20px;">
-        <h3>Características del sistema.</h3>
+        <h3>Prevención de lavado de dinero (PLD).</h3>
     </div>
 
     <div class="container" style="padding-top: 30px;">
@@ -14,8 +14,8 @@
             <img src="../images/omegaapp_sofomspld1.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text text-center" style="font-size: 20px;">
-                Esta es la vista general del sistema omega en donde de 
-                fondo se pondrá el logo de la respectiva empresa que lo adquiere.
+                    Esta es la vista general del sistema omega en donde de 
+                    fondo se pondrá el logo de la respectiva empresa que lo adquiere.
                 </p>
             </div>
             </div>
