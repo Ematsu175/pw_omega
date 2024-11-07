@@ -1,8 +1,10 @@
 <?php require ('views/header.php') ?>
     <h1>Figuras Fiscales</h1>
     <?php if(isset($mensaje)):$app->alerta($tipo,$mensaje); endif; ?>
-    <a href="figura_fiscal.php?accion=crear" class="btn btn-success">Nuevo</a>
-    <table class="table">
+    <div style="padding-left: 50px;">
+        <a href="figura_fiscal.php?accion=crear" class="btn btn-success" style="width: 200px;">Nuevo</a>
+    </div>
+    <table class="table table-hover table-dark" style="width: 900%; max-width: 1400px; margin: 0 auto;">
         <thead>
             <tr>
                 <th scope="col">ID</th>

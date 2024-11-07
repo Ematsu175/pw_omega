@@ -1,8 +1,11 @@
 <?php require ('views/header.php') ?>
     <h1>Empresas</h1>
     <?php if(isset($mensaje)):$app->alerta($tipo,$mensaje); endif; ?>
-    <a href="empresa.php?accion=crear" class="btn btn-success">Nuevo</a>
-    <table class="table">
+    <div style="padding-left: 75px;">
+        <a href="empresa.php?accion=crear" class="btn btn-success" style="width: 200px;">Nuevo</a>
+    </div>
+    
+    <table class="table table-hover table-dark" style="width: 90%; max-width: 1400px; margin: 0 auto;">
         <thead>
             <tr>
                 <th scope="col">ID</th>
