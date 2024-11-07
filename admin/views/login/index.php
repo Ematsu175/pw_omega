@@ -1,4 +1,4 @@
-<?php require_once ('views/header.php'); ?>
+
 <!-- Login 8 - Bootstrap Brain Component -->
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <section class="bg-light p-3 p-md-4 p-xl-5">

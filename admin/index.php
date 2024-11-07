@@ -23,10 +23,12 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden"></span>
         </button>
+
 </div>
 <div class="container text-center" style="padding-top: 20px;">
   <h1>Conócenos</h1>
 </div>
+
 <div class="container text-center" style="padding-top: 50px;">
   <div class="row">
     <div class="col-12 col-md-6 order-1 order-md-1">
@@ -145,7 +147,74 @@
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<div class="container text-center" style="padding-top: 20px;">
+  <h1>Sistema Omega Software S.A. de C.V.</h1>
+</div>
+
+<div class="container" style="padding-top: 30px;">
+  <div class="d-flex justify-content-center align-items-center mb-3">
+    <div class="card border-dark mb-3" style="width: 50rem;">
+      <img src="../images/omegaapp_main.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center" style="font-size: 20px;">
+          Esta es la vista general del sistema omega en donde de 
+          fondo se pondrá el logo de la respectiva empresa que lo adquiere.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center mb-3">
+    <div class="card border-dark mb-3" style="width: 50rem;">
+      <img src="../images/omegaapp_reportes.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center" style="font-size: 20px;">
+          Manejo de reportes dependiendo el periodo que requiera la empresa.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center mb-3">
+    <div class="card border-dark mb-3" style="width: 50rem;">
+      <img src="../images/omegaapp_contabilidad.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center" style="font-size: 20px;">
+          Sistema de contabilidad con acceso a descargar en formato CSV y PDF.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center vh-100" style="padding-top: 30px;">
+  <div class="card mb-3" style="max-width: 1024px; height: 500px;">
+    <div class="row g-0 h-100">
+      <div class="col-md-6 h-100">
+        <img src="../images/img_card1.jpg" class="img-fluid rounded-start w-100 h-100" alt="..." style="object-fit: cover;">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body d-flex justify-content-center align-items-center text-center" style="height: 100%;">
+          <ul class="list-unstyled">
+            <li class="py-2"><a href="">Cooperativa Autorizada</a></li>
+            <li class="py-2"><a href="">Cooperativa Básica</a></li>
+            <li class="py-2"><a href="sofoms.php">Sofoms Agro</a></li>
+            <li class="py-2"><a href="">Sofoms Microcrédito</a></li>
+            <li class="py-2"><a href="">Para Finanzas</a></li>
+            <li class="py-2"><a href="">Unión Crédito</a></li>
+            <li class="py-2"><a href="">SCAPS</a></li>
+            <li class="py-2"><a href="">Sofipo</a></li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 <?php require ('views/footer.php') ?>
